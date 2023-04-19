@@ -1,41 +1,64 @@
 package com.milo.ee.model.question;
 
+import com.fasterxml.jackson.annotation.JsonSubTypes;
+import com.fasterxml.jackson.annotation.JsonTypeInfo;
+
 /**
  * Abstract class Question that include field that every question has
  *
  * @author Milo
  */
+@JsonTypeInfo(
+        use = JsonTypeInfo.Id.NAME,
+        include = JsonTypeInfo.As.PROPERTY,
+        property = "type"
+)
+@JsonSubTypes({
+        @JsonSubTypes.Type(value = Freetext.class, name = "FREETEXT"),
+        @JsonSubTypes.Type(value = Keyword.class, name = "KEYWORD"),
+        @JsonSubTypes.Type(value = Match.class, name = "MATCH"),
+        @JsonSubTypes.Type(value = Multichoice.class, name = "MULTICHOICE"),
+        @JsonSubTypes.Type(value = Sequence.class, name = "SEQUENCE"),
+})
 public abstract class Question {
 
+    private String type;
     private String questionText;
     private String questionType;
 
     //    Config values
-    private boolean showAnswerHint;
-    private boolean correctToProceed;
+    private String showAnswerHint;
+    private String correctToProceed;
     private String showFeedback;
     private String weight;
-    private boolean isOptional;
-    private boolean noMarkingRequired;
+    private String isOptional;
+    private String noMarkingRequired;
     private String markingGuide;
 
     //    Empty constructor
     public Question() {
     }
 
-    public Question(String questionText, String questionType) {
+    public Question(String type, String questionText, String questionType) {
+        this.type = type;
         this.questionText = questionText;
         this.questionType = questionType;
-        this.showAnswerHint = false;
-        this.correctToProceed = false;
+        this.showAnswerHint = "";
+        this.correctToProceed = "";
         this.showFeedback = "";
         this.weight = "";
-        this.isOptional = false;
-        this.noMarkingRequired = false;
+        this.isOptional = "";
+        this.noMarkingRequired = "";
         this.markingGuide = "";
     }
 
+
     //    Getters and setters
+
+
+    public String getType() {
+        return type;
+    }
 
     public String getQuestionText() {
         return questionText;
@@ -45,11 +68,11 @@ public abstract class Question {
         return questionType;
     }
 
-    public boolean isShowAnswerHint() {
+    public String isShowAnswerHint() {
         return showAnswerHint;
     }
 
-    public boolean isCorrectToProceed() {
+    public String isCorrectToProceed() {
         return correctToProceed;
     }
 
@@ -61,11 +84,11 @@ public abstract class Question {
         return weight;
     }
 
-    public boolean isOptional() {
+    public String isOptional() {
         return isOptional;
     }
 
-    public boolean isNoMarkingRequired() {
+    public String isNoMarkingRequired() {
         return noMarkingRequired;
     }
 
@@ -82,12 +105,12 @@ public abstract class Question {
     }
 
     //    Util methods
-    public void setConfiguration(QConfiguration configuration) {
-        this.showAnswerHint = configuration.isShowAnswerHint();
-        this.correctToProceed = configuration.isCorrectToProceed();
-        this.showFeedback = configuration.getShowFeedback();
-        this.weight = configuration.getWeight();
-        this.isOptional = configuration.isOptional();
-    }
+//    public void setConfiguration(QConfiguration configuration) {
+//        this.showAnswerHint = configuration.isShowAnswerHint();
+//        this.correctToProceed = configuration.isCorrectToProceed();
+//        this.showFeedback = configuration.getShowFeedback();
+//        this.weight = configuration.getWeight();
+//        this.isOptional = configuration.isOptional();
+//    }
 
 }
