@@ -1,5 +1,8 @@
 package com.milo.ee.model.question;
 
+import com.fasterxml.jackson.annotation.JsonTypeName;
+
+@JsonTypeName("SEQUENCE")
 public class Sequence extends Question {
 
     private String sequenceText1;
