@@ -2,6 +2,7 @@ package com.milo.ee.model.question;
 
 /**
  * Abstract class Question that include field that every question has
+ *
  * @author Milo
  */
 public abstract class Question {
@@ -15,69 +16,72 @@ public abstract class Question {
     private String showFeedback;
     private String weight;
     private boolean isOptional;
+    private boolean noMarkingRequired;
+    private String markingGuide;
 
     //    Empty constructor
     public Question() {
     }
 
-//    Getters and setters
-    public String getQuestionText() {
-        return questionText;
+    public Question(String questionText, String questionType) {
+        this.questionText = questionText;
+        this.questionType = questionType;
+        this.showAnswerHint = false;
+        this.correctToProceed = false;
+        this.showFeedback = "";
+        this.weight = "";
+        this.isOptional = false;
+        this.noMarkingRequired = false;
+        this.markingGuide = "";
     }
 
-    public void setQuestionText(String questionText) {
-        this.questionText = questionText;
+    //    Getters and setters
+
+    public String getQuestionText() {
+        return questionText;
     }
 
     public String getQuestionType() {
         return questionType;
     }
 
-    public void setQuestionType(String questionType) {
-        this.questionType = questionType;
-    }
-
     public boolean isShowAnswerHint() {
         return showAnswerHint;
-    }
-
-    public void setShowAnswerHint(boolean showAnswerHint) {
-        this.showAnswerHint = showAnswerHint;
     }
 
     public boolean isCorrectToProceed() {
         return correctToProceed;
     }
 
-    public void setCorrectToProceed(boolean correctToProceed) {
-        this.correctToProceed = correctToProceed;
-    }
-
     public String getShowFeedback() {
         return showFeedback;
-    }
-
-    public void setShowFeedback(String showFeedback) {
-        this.showFeedback = showFeedback;
     }
 
     public String getWeight() {
         return weight;
     }
 
-    public void setWeight(String weight) {
-        this.weight = weight;
-    }
-
     public boolean isOptional() {
         return isOptional;
     }
 
-    public void setOptional(boolean optional) {
-        isOptional = optional;
+    public boolean isNoMarkingRequired() {
+        return noMarkingRequired;
     }
 
-//    Util methods
+    public String getMarkingGuide() {
+        return markingGuide;
+    }
+
+    @Override
+    public String toString() {
+        return "Question{" +
+                "questionText='" + questionText + '\'' +
+                ", questionType='" + questionType + '\'' +
+                '}';
+    }
+
+    //    Util methods
     public void setConfiguration(QConfiguration configuration) {
         this.showAnswerHint = configuration.isShowAnswerHint();
         this.correctToProceed = configuration.isCorrectToProceed();
