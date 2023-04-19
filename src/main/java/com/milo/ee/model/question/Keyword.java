@@ -1,5 +1,9 @@
 package com.milo.ee.model.question;
 
+
+import com.fasterxml.jackson.annotation.JsonTypeName;
+
+@JsonTypeName("KEYWORD")
 public class Keyword extends Question {
 
     private String answer1;
@@ -13,13 +17,13 @@ public class Keyword extends Question {
     private String answer9;
     private String answer10;
 
-    public Keyword(String questionText, String questionType, String answer1) {
-        super(questionText, questionType);
+    public Keyword(String type, String questionText, String questionType, String answer1) {
+        super(type, questionText, questionType);
         this.answer1 = answer1;
     }
 
-    public Keyword(String questionText, String questionType, String answer1, String answer2) {
-        super(questionText, questionType);
+    public Keyword(String type, String questionText, String questionType, String answer1, String answer2) {
+        super(type, questionText, questionType);
         this.answer1 = answer1;
         this.answer2 = answer2;
     }
