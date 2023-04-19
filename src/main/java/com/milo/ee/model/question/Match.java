@@ -1,5 +1,8 @@
 package com.milo.ee.model.question;
 
+import com.fasterxml.jackson.annotation.JsonTypeName;
+
+@JsonTypeName("MATCH")
 public class Match extends Question {
 
     private String optionText1;
@@ -26,8 +29,8 @@ public class Match extends Question {
     public Match() {
     }
 
-    public Match(String questionText, String questionType, String optionText1, String answerOption1, String optionText2, String answerOption2, String optionText3, String answerOption3) {
-        super(questionText, questionType);
+    public Match(String type, String questionText, String questionType, String optionText1, String answerOption1, String optionText2, String answerOption2, String optionText3, String answerOption3) {
+        super(type,questionText, questionType);
         this.optionText1 = optionText1;
         this.answerOption1 = answerOption1;
         this.optionText2 = optionText2;
