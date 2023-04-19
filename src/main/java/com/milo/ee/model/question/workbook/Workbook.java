@@ -8,6 +8,7 @@ import org.apache.poi.ss.usermodel.Sheet;
 
 /**
  * Workbook class that simulate an Excel file
+ *
  * @author Milo
  */
 public class Workbook {
@@ -17,11 +18,12 @@ public class Workbook {
     public Workbook() {
         workbook = new HSSFWorkbook();
         Sheet sheet = workbook.createSheet("exam");
-        setFields(sheet);
+        setDefaultValuesForFirsCell(sheet);
     }
 
     /**
      * Method in charge of return the object ready with values initialized
+     *
      * @return workbook
      */
     public org.apache.poi.ss.usermodel.Workbook getWorkbook() {
@@ -33,7 +35,7 @@ public class Workbook {
      *
      * @param sheet page to set values
      */
-    private void setFields(Sheet sheet) {
+    private void setDefaultValuesForFirsCell(Sheet sheet) {
         Row firstRow = sheet.createRow(0);
 
         Cell cellQuestionText = firstRow.createCell(0);
