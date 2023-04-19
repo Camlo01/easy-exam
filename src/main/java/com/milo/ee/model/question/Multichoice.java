@@ -2,36 +2,46 @@ package com.milo.ee.model.question;
 
 public class Multichoice extends Question {
 
-    private String Answer1;
+    private String answer1;
     private boolean isAnswer1;
-    private String Answer2;
+    private String answer2;
     private boolean isAnswer2;
-    private String Answer3;
+    private String answer3;
     private boolean isAnswer3;
-    private String Answer4;
+    private String answer4;
     private boolean isAnswer4;
-    private String Answer5;
+    private String answer5;
     private boolean isAnswer5;
-    private String Answer6;
+    private String answer6;
     private boolean isAnswer6;
-    private String Answer7;
+    private String answer7;
     private boolean isAnswer7;
-    private String Answer8;
+    private String answer8;
     private boolean isAnswer8;
-    private String Answer9;
+    private String answer9;
     private boolean isAnswer9;
-    private String Answer10;
+    private String answer10;
     private boolean isAnswer10;
 
     public Multichoice() {
     }
 
+    public Multichoice(String questionText, String questionType, String answer1, boolean isAnswer1, String answer2, boolean isAnswer2, String answer3, boolean isAnswer3) {
+        super(questionText, questionType);
+        this.answer1 = answer1;
+        this.isAnswer1 = isAnswer1;
+        this.answer2 = answer2;
+        this.isAnswer2 = isAnswer2;
+        this.answer3 = answer3;
+        this.isAnswer3 = isAnswer3;
+    }
+
     public String getAnswer1() {
-        return Answer1;
+        return answer1;
     }
 
     public void setAnswer1(String answer1) {
-        Answer1 = answer1;
+        this.answer1 = answer1;
     }
 
     public boolean isAnswer1() {
@@ -43,11 +53,11 @@ public class Multichoice extends Question {
     }
 
     public String getAnswer2() {
-        return Answer2;
+        return answer2;
     }
 
     public void setAnswer2(String answer2) {
-        Answer2 = answer2;
+        this.answer2 = answer2;
     }
 
     public boolean isAnswer2() {
@@ -59,11 +69,11 @@ public class Multichoice extends Question {
     }
 
     public String getAnswer3() {
-        return Answer3;
+        return answer3;
     }
 
     public void setAnswer3(String answer3) {
-        Answer3 = answer3;
+        this.answer3 = answer3;
     }
 
     public boolean isAnswer3() {
@@ -75,11 +85,11 @@ public class Multichoice extends Question {
     }
 
     public String getAnswer4() {
-        return Answer4;
+        return answer4;
     }
 
     public void setAnswer4(String answer4) {
-        Answer4 = answer4;
+        this.answer4 = answer4;
     }
 
     public boolean isAnswer4() {
@@ -91,11 +101,11 @@ public class Multichoice extends Question {
     }
 
     public String getAnswer5() {
-        return Answer5;
+        return answer5;
     }
 
     public void setAnswer5(String answer5) {
-        Answer5 = answer5;
+        this.answer5 = answer5;
     }
 
     public boolean isAnswer5() {
@@ -107,11 +117,11 @@ public class Multichoice extends Question {
     }
 
     public String getAnswer6() {
-        return Answer6;
+        return answer6;
     }
 
     public void setAnswer6(String answer6) {
-        Answer6 = answer6;
+        this.answer6 = answer6;
     }
 
     public boolean isAnswer6() {
@@ -123,11 +133,11 @@ public class Multichoice extends Question {
     }
 
     public String getAnswer7() {
-        return Answer7;
+        return answer7;
     }
 
     public void setAnswer7(String answer7) {
-        Answer7 = answer7;
+        this.answer7 = answer7;
     }
 
     public boolean isAnswer7() {
@@ -139,11 +149,11 @@ public class Multichoice extends Question {
     }
 
     public String getAnswer8() {
-        return Answer8;
+        return answer8;
     }
 
     public void setAnswer8(String answer8) {
-        Answer8 = answer8;
+        this.answer8 = answer8;
     }
 
     public boolean isAnswer8() {
@@ -155,11 +165,11 @@ public class Multichoice extends Question {
     }
 
     public String getAnswer9() {
-        return Answer9;
+        return answer9;
     }
 
     public void setAnswer9(String answer9) {
-        Answer9 = answer9;
+        this.answer9 = answer9;
     }
 
     public boolean isAnswer9() {
@@ -171,11 +181,11 @@ public class Multichoice extends Question {
     }
 
     public String getAnswer10() {
-        return Answer10;
+        return answer10;
     }
 
     public void setAnswer10(String answer10) {
-        Answer10 = answer10;
+        this.answer10 = answer10;
     }
 
     public boolean isAnswer10() {
