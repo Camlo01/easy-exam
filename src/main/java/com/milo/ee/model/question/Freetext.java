@@ -11,7 +11,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 public class Freetext extends Question {
 
     public Freetext(String type, String questionText, String questionType) {
-        super(questionText, questionType);
+        super(type, questionText, questionType);
     }
 
     @Override

@@ -29,8 +29,8 @@ public class Multichoice extends Question {
     public Multichoice() {
     }
 
-    public Multichoice(String questionText, String questionType, String answer1, String isAnswer1, String answer2, String isAnswer2, String answer3, String isAnswer3) {
-        super(questionText, questionType);
+    public Multichoice(String type, String questionText, String questionType, String answer1, String isAnswer1, String answer2, String isAnswer2, String answer3, String isAnswer3) {
+        super(type, questionText, questionType);
         this.answer1 = answer1;
         this.isAnswer1 = isAnswer1;
         this.answer2 = answer2;
@@ -39,20 +39,8 @@ public class Multichoice extends Question {
         this.isAnswer3 = isAnswer3;
     }
 
-    public Multichoice(String questionText, String questionType, String answer1, String isAnswer1, String answer2, String isAnswer2, String answer3, String isAnswer3, String answer4, String isAnswer4) {
-        super(questionText, questionType);
-        this.answer1 = answer1;
-        this.isAnswer1 = isAnswer1;
-        this.answer2 = answer2;
-        this.isAnswer2 = isAnswer2;
-        this.answer3 = answer3;
-        this.isAnswer3 = isAnswer3;
-        this.answer4 = answer4;
-        this.isAnswer4 = isAnswer4;
-    }
-
-    public Multichoice(String questionText, String questionType, String answer1, String isAnswer1, String answer2, String isAnswer2, String answer3, String isAnswer3, String answer4, String isAnswer4, String answer5, String isAnswer5) {
-        super(questionText, questionType);
+    public Multichoice(String type, String questionText, String questionType, String answer1, String isAnswer1, String answer2, String isAnswer2, String answer3, String isAnswer3, String answer4, String isAnswer4) {
+        super(type, questionText, questionType);
         this.answer1 = answer1;
         this.isAnswer1 = isAnswer1;
         this.answer2 = answer2;
@@ -61,12 +49,10 @@ public class Multichoice extends Question {
         this.isAnswer3 = isAnswer3;
         this.answer4 = answer4;
         this.isAnswer4 = isAnswer4;
-        this.answer5 = answer5;
-        this.isAnswer5 = isAnswer5;
     }
 
-    public Multichoice(String questionText, String questionType, String answer1, String isAnswer1, String answer2, String isAnswer2, String answer3, String isAnswer3, String answer4, String isAnswer4, String answer5, String isAnswer5, String answer6, String isAnswer6) {
-        super(questionText, questionType);
+    public Multichoice(String type, String questionText, String questionType, String answer1, String isAnswer1, String answer2, String isAnswer2, String answer3, String isAnswer3, String answer4, String isAnswer4, String answer5, String isAnswer5) {
+        super(type, questionText, questionType);
         this.answer1 = answer1;
         this.isAnswer1 = isAnswer1;
         this.answer2 = answer2;
@@ -77,93 +63,8 @@ public class Multichoice extends Question {
         this.isAnswer4 = isAnswer4;
         this.answer5 = answer5;
         this.isAnswer5 = isAnswer5;
-        this.answer6 = answer6;
-        this.isAnswer6 = isAnswer6;
     }
 
-    public Multichoice(String questionText, String questionType, String answer1, String isAnswer1, String answer2, String isAnswer2, String answer3, String isAnswer3, String answer4, String isAnswer4, String answer5, String isAnswer5, String answer6, String isAnswer6, String answer7, String isAnswer7) {
-        super(questionText, questionType);
-        this.answer1 = answer1;
-        this.isAnswer1 = isAnswer1;
-        this.answer2 = answer2;
-        this.isAnswer2 = isAnswer2;
-        this.answer3 = answer3;
-        this.isAnswer3 = isAnswer3;
-        this.answer4 = answer4;
-        this.isAnswer4 = isAnswer4;
-        this.answer5 = answer5;
-        this.isAnswer5 = isAnswer5;
-        this.answer6 = answer6;
-        this.isAnswer6 = isAnswer6;
-        this.answer7 = answer7;
-        this.isAnswer7 = isAnswer7;
-    }
-
-    public Multichoice(String questionText, String questionType, String answer1, String isAnswer1, String answer2, String isAnswer2, String answer3, String isAnswer3, String answer4, String isAnswer4, String answer5, String isAnswer5, String answer6, String isAnswer6, String answer7, String isAnswer7, String answer8, String isAnswer8) {
-        super(questionText, questionType);
-        this.answer1 = answer1;
-        this.isAnswer1 = isAnswer1;
-        this.answer2 = answer2;
-        this.isAnswer2 = isAnswer2;
-        this.answer3 = answer3;
-        this.isAnswer3 = isAnswer3;
-        this.answer4 = answer4;
-        this.isAnswer4 = isAnswer4;
-        this.answer5 = answer5;
-        this.isAnswer5 = isAnswer5;
-        this.answer6 = answer6;
-        this.isAnswer6 = isAnswer6;
-        this.answer7 = answer7;
-        this.isAnswer7 = isAnswer7;
-        this.answer8 = answer8;
-        this.isAnswer8 = isAnswer8;
-    }
-
-    public Multichoice(String questionText, String questionType, String answer1, String isAnswer1, String answer2, String isAnswer2, String answer3, String isAnswer3, String answer4, String isAnswer4, String answer5, String isAnswer5, String answer6, String isAnswer6, String answer7, String isAnswer7, String answer8, String isAnswer8, String answer9, String isAnswer9) {
-        super(questionText, questionType);
-        this.answer1 = answer1;
-        this.isAnswer1 = isAnswer1;
-        this.answer2 = answer2;
-        this.isAnswer2 = isAnswer2;
-        this.answer3 = answer3;
-        this.isAnswer3 = isAnswer3;
-        this.answer4 = answer4;
-        this.isAnswer4 = isAnswer4;
-        this.answer5 = answer5;
-        this.isAnswer5 = isAnswer5;
-        this.answer6 = answer6;
-        this.isAnswer6 = isAnswer6;
-        this.answer7 = answer7;
-        this.isAnswer7 = isAnswer7;
-        this.answer8 = answer8;
-        this.isAnswer8 = isAnswer8;
-        this.answer9 = answer9;
-        this.isAnswer9 = isAnswer9;
-    }
-
-    public Multichoice(String questionText, String questionType, String answer1, String isAnswer1, String answer2, String isAnswer2, String answer3, String isAnswer3, String answer4, String isAnswer4, String answer5, String isAnswer5, String answer6, String isAnswer6, String answer7, String isAnswer7, String answer8, String isAnswer8, String answer9, String isAnswer9, String answer10, String isAnswer10) {
-        super(questionText, questionType);
-        this.answer1 = answer1;
-        this.isAnswer1 = isAnswer1;
-        this.answer2 = answer2;
-        this.isAnswer2 = isAnswer2;
-        this.answer3 = answer3;
-        this.isAnswer3 = isAnswer3;
-        this.answer4 = answer4;
-        this.isAnswer4 = isAnswer4;
-        this.answer5 = answer5;
-        this.isAnswer5 = isAnswer5;
-        this.answer6 = answer6;
-        this.isAnswer6 = isAnswer6;
-        this.answer7 = answer7;
-        this.isAnswer7 = isAnswer7;
-        this.answer8 = answer8;
-        this.isAnswer8 = isAnswer8;
-        this.answer9 = answer9;
-        this.isAnswer9 = isAnswer9;
-        this.answer10 = answer10;
-        this.isAnswer10 = isAnswer10;
-    }
 
     public String getAnswer1() {
         return answer1;

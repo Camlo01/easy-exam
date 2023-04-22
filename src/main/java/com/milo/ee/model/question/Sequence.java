@@ -19,99 +19,22 @@ public class Sequence extends Question {
     public Sequence() {
     }
 
-    public Sequence(String questionText, String type, String sequenceText1) {
-        super(questionText, type);
+    public Sequence(String type, String questionText, String questionType, String sequenceText1) {
+        super(type, questionText, questionType);
         this.sequenceText1 = sequenceText1;
     }
 
-    public Sequence(String questionText, String type, String sequenceText1, String sequenceText2) {
-        super(questionText, type);
-        this.sequenceText1 = sequenceText1;
-        this.sequenceText2 = sequenceText2;
-    }
-
-    public Sequence(String questionText, String type, String sequenceText1, String sequenceText2, String sequenceText3) {
-        super(questionText, type);
+    public Sequence(String type, String questionText, String questionType, String sequenceText1, String sequenceText2) {
+        super(type, questionText, questionType);
         this.sequenceText1 = sequenceText1;
         this.sequenceText2 = sequenceText2;
-        this.sequenceText3 = sequenceText3;
     }
 
-    public Sequence(String questionText, String type, String sequenceText1, String sequenceText2, String sequenceText3, String sequenceText4) {
-        super(questionText, type);
+    public Sequence(String type, String questionText, String questionType, String sequenceText1, String sequenceText2, String sequenceText3) {
+        super(type, questionText, questionType);
         this.sequenceText1 = sequenceText1;
         this.sequenceText2 = sequenceText2;
         this.sequenceText3 = sequenceText3;
-        this.sequenceText4 = sequenceText4;
-    }
-
-    public Sequence(String questionText, String type, String sequenceText1, String sequenceText2, String sequenceText3, String sequenceText4, String sequenceText5) {
-        super(questionText, type);
-        this.sequenceText1 = sequenceText1;
-        this.sequenceText2 = sequenceText2;
-        this.sequenceText3 = sequenceText3;
-        this.sequenceText4 = sequenceText4;
-        this.sequenceText5 = sequenceText5;
-    }
-
-    public Sequence(String questionText, String type, String sequenceText1, String sequenceText2, String sequenceText3, String sequenceText4, String sequenceText5, String sequenceText6) {
-        super(questionText, type);
-        this.sequenceText1 = sequenceText1;
-        this.sequenceText2 = sequenceText2;
-        this.sequenceText3 = sequenceText3;
-        this.sequenceText4 = sequenceText4;
-        this.sequenceText5 = sequenceText5;
-        this.sequenceText6 = sequenceText6;
-    }
-
-    public Sequence(String questionText, String type, String sequenceText1, String sequenceText2, String sequenceText3, String sequenceText4, String sequenceText5, String sequenceText6, String sequenceText7) {
-        super(questionText, type);
-        this.sequenceText1 = sequenceText1;
-        this.sequenceText2 = sequenceText2;
-        this.sequenceText3 = sequenceText3;
-        this.sequenceText4 = sequenceText4;
-        this.sequenceText5 = sequenceText5;
-        this.sequenceText6 = sequenceText6;
-        this.sequenceText7 = sequenceText7;
-    }
-
-    public Sequence(String questionText, String type, String sequenceText1, String sequenceText2, String sequenceText3, String sequenceText4, String sequenceText5, String sequenceText6, String sequenceText7, String sequenceText8) {
-        super(questionText, type);
-        this.sequenceText1 = sequenceText1;
-        this.sequenceText2 = sequenceText2;
-        this.sequenceText3 = sequenceText3;
-        this.sequenceText4 = sequenceText4;
-        this.sequenceText5 = sequenceText5;
-        this.sequenceText6 = sequenceText6;
-        this.sequenceText7 = sequenceText7;
-        this.sequenceText8 = sequenceText8;
-    }
-
-    public Sequence(String questionText, String type, String sequenceText1, String sequenceText2, String sequenceText3, String sequenceText4, String sequenceText5, String sequenceText6, String sequenceText7, String sequenceText8, String sequenceText9) {
-        super(questionText, type);
-        this.sequenceText1 = sequenceText1;
-        this.sequenceText2 = sequenceText2;
-        this.sequenceText3 = sequenceText3;
-        this.sequenceText4 = sequenceText4;
-        this.sequenceText5 = sequenceText5;
-        this.sequenceText6 = sequenceText6;
-        this.sequenceText7 = sequenceText7;
-        this.sequenceText8 = sequenceText8;
-        this.sequenceText9 = sequenceText9;
-    }
-
-    public Sequence(String questionText, String type, String sequenceText1, String sequenceText2, String sequenceText3, String sequenceText4, String sequenceText5, String sequenceText6, String sequenceText7, String sequenceText8, String sequenceText9, String sequenceText10) {
-        super(questionText, type);
-        this.sequenceText1 = sequenceText1;
-        this.sequenceText2 = sequenceText2;
-        this.sequenceText3 = sequenceText3;
-        this.sequenceText4 = sequenceText4;
-        this.sequenceText5 = sequenceText5;
-        this.sequenceText6 = sequenceText6;
-        this.sequenceText7 = sequenceText7;
-        this.sequenceText8 = sequenceText8;
-        this.sequenceText9 = sequenceText9;
-        this.sequenceText10 = sequenceText10;
     }
 
     public String getSequenceText1() {
