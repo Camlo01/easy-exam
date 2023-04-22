@@ -29,14 +29,148 @@ public class Match extends Question {
     public Match() {
     }
 
-    public Match(String type, String questionText, String questionType, String optionText1, String answerOption1, String optionText2, String answerOption2, String optionText3, String answerOption3) {
-        super(type,questionText, questionType);
+    public Match(String questionText, String questionType, String optionText1, String answerOption1, String optionText2, String answerOption2) {
+        super(questionText, questionType);
+        this.optionText1 = optionText1;
+        this.answerOption1 = answerOption1;
+        this.optionText2 = optionText2;
+        this.answerOption2 = answerOption2;
+    }
+
+    public Match(String questionText, String questionType, String optionText1, String answerOption1, String optionText2, String answerOption2, String optionText3, String answerOption3) {
+        super(questionText, questionType);
         this.optionText1 = optionText1;
         this.answerOption1 = answerOption1;
         this.optionText2 = optionText2;
         this.answerOption2 = answerOption2;
         this.optionText3 = optionText3;
         this.answerOption3 = answerOption3;
+    }
+
+    public Match(String questionText, String questionType, String optionText1, String answerOption1, String optionText2, String answerOption2, String optionText3, String answerOption3, String optionText4, String answerOption4) {
+        super(questionText, questionType);
+        this.optionText1 = optionText1;
+        this.answerOption1 = answerOption1;
+        this.optionText2 = optionText2;
+        this.answerOption2 = answerOption2;
+        this.optionText3 = optionText3;
+        this.answerOption3 = answerOption3;
+        this.optionText4 = optionText4;
+        this.answerOption4 = answerOption4;
+    }
+
+    public Match(String questionText, String questionType, String optionText1, String answerOption1, String optionText2, String answerOption2, String optionText3, String answerOption3, String optionText4, String answerOption4, String optionText5, String answerOption5) {
+        super(questionText, questionType);
+        this.optionText1 = optionText1;
+        this.answerOption1 = answerOption1;
+        this.optionText2 = optionText2;
+        this.answerOption2 = answerOption2;
+        this.optionText3 = optionText3;
+        this.answerOption3 = answerOption3;
+        this.optionText4 = optionText4;
+        this.answerOption4 = answerOption4;
+        this.optionText5 = optionText5;
+        this.answerOption5 = answerOption5;
+    }
+
+    public Match(String questionText, String questionType, String optionText1, String answerOption1, String optionText2, String answerOption2, String optionText3, String answerOption3, String optionText4, String answerOption4, String optionText5, String answerOption5, String optionText6, String answerOption6) {
+        super(questionText, questionType);
+        this.optionText1 = optionText1;
+        this.answerOption1 = answerOption1;
+        this.optionText2 = optionText2;
+        this.answerOption2 = answerOption2;
+        this.optionText3 = optionText3;
+        this.answerOption3 = answerOption3;
+        this.optionText4 = optionText4;
+        this.answerOption4 = answerOption4;
+        this.optionText5 = optionText5;
+        this.answerOption5 = answerOption5;
+        this.optionText6 = optionText6;
+        this.answerOption6 = answerOption6;
+    }
+
+    public Match(String questionText, String questionType, String optionText1, String answerOption1, String optionText2, String answerOption2, String optionText3, String answerOption3, String optionText4, String answerOption4, String optionText5, String answerOption5, String optionText6, String answerOption6, String optionText7, String answerOption7) {
+        super(questionText, questionType);
+        this.optionText1 = optionText1;
+        this.answerOption1 = answerOption1;
+        this.optionText2 = optionText2;
+        this.answerOption2 = answerOption2;
+        this.optionText3 = optionText3;
+        this.answerOption3 = answerOption3;
+        this.optionText4 = optionText4;
+        this.answerOption4 = answerOption4;
+        this.optionText5 = optionText5;
+        this.answerOption5 = answerOption5;
+        this.optionText6 = optionText6;
+        this.answerOption6 = answerOption6;
+        this.optionText7 = optionText7;
+        this.answerOption7 = answerOption7;
+    }
+
+    public Match(String questionText, String questionType, String optionText1, String answerOption1, String optionText2, String answerOption2, String optionText3, String answerOption3, String optionText4, String answerOption4, String optionText5, String answerOption5, String optionText6, String answerOption6, String optionText7, String answerOption7, String optionText8, String answerOption8) {
+        super(questionText, questionType);
+        this.optionText1 = optionText1;
+        this.answerOption1 = answerOption1;
+        this.optionText2 = optionText2;
+        this.answerOption2 = answerOption2;
+        this.optionText3 = optionText3;
+        this.answerOption3 = answerOption3;
+        this.optionText4 = optionText4;
+        this.answerOption4 = answerOption4;
+        this.optionText5 = optionText5;
+        this.answerOption5 = answerOption5;
+        this.optionText6 = optionText6;
+        this.answerOption6 = answerOption6;
+        this.optionText7 = optionText7;
+        this.answerOption7 = answerOption7;
+        this.optionText8 = optionText8;
+        this.answerOption8 = answerOption8;
+    }
+
+    public Match(String questionText, String questionType, String optionText1, String answerOption1, String optionText2, String answerOption2, String optionText3, String answerOption3, String optionText4, String answerOption4, String optionText5, String answerOption5, String optionText6, String answerOption6, String optionText7, String answerOption7, String optionText8, String answerOption8, String optionText9, String answerOption9) {
+        super(questionText, questionType);
+        this.optionText1 = optionText1;
+        this.answerOption1 = answerOption1;
+        this.optionText2 = optionText2;
+        this.answerOption2 = answerOption2;
+        this.optionText3 = optionText3;
+        this.answerOption3 = answerOption3;
+        this.optionText4 = optionText4;
+        this.answerOption4 = answerOption4;
+        this.optionText5 = optionText5;
+        this.answerOption5 = answerOption5;
+        this.optionText6 = optionText6;
+        this.answerOption6 = answerOption6;
+        this.optionText7 = optionText7;
+        this.answerOption7 = answerOption7;
+        this.optionText8 = optionText8;
+        this.answerOption8 = answerOption8;
+        this.optionText9 = optionText9;
+        this.answerOption9 = answerOption9;
+    }
+
+    public Match(String questionText, String questionType, String optionText1, String answerOption1, String optionText2, String answerOption2, String optionText3, String answerOption3, String optionText4, String answerOption4, String optionText5, String answerOption5, String optionText6, String answerOption6, String optionText7, String answerOption7, String optionText8, String answerOption8, String optionText9, String answerOption9, String optionText10, String answerOption10) {
+        super(questionText, questionType);
+        this.optionText1 = optionText1;
+        this.answerOption1 = answerOption1;
+        this.optionText2 = optionText2;
+        this.answerOption2 = answerOption2;
+        this.optionText3 = optionText3;
+        this.answerOption3 = answerOption3;
+        this.optionText4 = optionText4;
+        this.answerOption4 = answerOption4;
+        this.optionText5 = optionText5;
+        this.answerOption5 = answerOption5;
+        this.optionText6 = optionText6;
+        this.answerOption6 = answerOption6;
+        this.optionText7 = optionText7;
+        this.answerOption7 = answerOption7;
+        this.optionText8 = optionText8;
+        this.answerOption8 = answerOption8;
+        this.optionText9 = optionText9;
+        this.answerOption9 = answerOption9;
+        this.optionText10 = optionText10;
+        this.answerOption10 = answerOption10;
     }
 
     public String getOptionText1() {

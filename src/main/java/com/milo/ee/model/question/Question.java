@@ -39,10 +39,10 @@ public abstract class Question {
     public Question() {
     }
 
-    public Question(String type, String questionText, String questionType) {
-        this.type = type;
+    public Question(String questionText, String type) {
         this.questionText = questionText;
-        this.questionType = questionType;
+        this.type = type;
+        this.questionType = type;
         this.showAnswerHint = "";
         this.correctToProceed = "";
         this.showFeedback = "";
