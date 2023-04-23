@@ -4,6 +4,8 @@ import com.milo.ee.model.question.Question;
 import com.milo.ee.service.QuestionService;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletResponse;
@@ -17,6 +19,11 @@ public class QuestionnaireController {
 
     @Autowired
     private QuestionService service;
+
+    @GetMapping("/hello")
+    public ResponseEntity<?> sayHi() {
+        return new ResponseEntity<>("La aplicación está funcionando correctamente! :D", HttpStatus.OK);
+    }
 
     @PostMapping("/document-xls")
     public void returnWorkbookAsExcelFile(HttpServletResponse response, @RequestBody ArrayList<Question> questions) throws IOException {
