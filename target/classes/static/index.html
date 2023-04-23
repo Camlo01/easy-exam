@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="index.js"></script>
+    <title>easy exam</title>
+</head>
+
+<body>
+    <div>
+        <h1>First Commit</h1>
+        <button id="awd" onclick="method()">test button</button>
+    </div>
+
+
+    <hr>
+    <div>
+        <label for="inputQuestionText">Question name:</label>
+        <input type="text" id="inputQuestionText">
+        <br>
+        <label for="inputQuestionType">Select question type: </label>
+        <select name="awd" id="inputQuestionType">
+            <option value="MULTICHOICE">Multichoice</option>
+            <option value="KEYWORD">Keyword</option>
+            <option value="FREETEXT">Free text</option>
+            <option value="MATCH">Match</option>
+            <option value="SEQUENCE">Sequence</option>
+        </select>
+        <br>
+        <label for="inputIsOptional">Make it optional?</label>
+        <input type="checkbox" id="inputIsOptional">
+        <br>
+        <label for="inputMarkingRequired">Marking requiered?</label>
+        <input type="checkbox" id="inputMarkingRequired">
+        <br>
+        <label for="inputMarkingGuide">with marking guide?</label>
+        <input type="text" id="inputMarkingGuide">
+        <br>
+        <button id="buttonSendData" onclick="sendDataMultichoice()">file Multichoice</button>
+        <button id="buttonSendData" onclick="sendDataKeyword()">file Keyword</button>
+        <button id="buttonSendData" onclick="sendDataFreeText()">file Free text</button>
+        <button id="buttonSendData" onclick="sendDataMatch()">file Match</button>
+        <button id="buttonSendData" onclick="sendDataSecuence()">file Secuence</button>
+    </div>
+
+</body>
+
+</html>
