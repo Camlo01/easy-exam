@@ -35,6 +35,83 @@ public class Keyword extends Question {
         this.answer3 = answer3;
     }
 
+    public Keyword(String type, String questionText, String questionType, String answer1, String answer2, String answer3, String answer4) {
+        super(type, questionText, questionType);
+        this.answer1 = answer1;
+        this.answer2 = answer2;
+        this.answer3 = answer3;
+        this.answer4 = answer4;
+    }
+
+    public Keyword(String type, String questionText, String questionType, String answer1, String answer2, String answer3, String answer4, String answer5) {
+        super(type, questionText, questionType);
+        this.answer1 = answer1;
+        this.answer2 = answer2;
+        this.answer3 = answer3;
+        this.answer4 = answer4;
+        this.answer5 = answer5;
+    }
+
+    public Keyword(String type, String questionText, String questionType, String answer1, String answer2, String answer3, String answer4, String answer5, String answer6) {
+        super(type, questionText, questionType);
+        this.answer1 = answer1;
+        this.answer2 = answer2;
+        this.answer3 = answer3;
+        this.answer4 = answer4;
+        this.answer5 = answer5;
+        this.answer6 = answer6;
+    }
+
+    public Keyword(String type, String questionText, String questionType, String answer1, String answer2, String answer3, String answer4, String answer5, String answer6, String answer7) {
+        super(type, questionText, questionType);
+        this.answer1 = answer1;
+        this.answer2 = answer2;
+        this.answer3 = answer3;
+        this.answer4 = answer4;
+        this.answer5 = answer5;
+        this.answer6 = answer6;
+        this.answer7 = answer7;
+    }
+
+    public Keyword(String type, String questionText, String questionType, String answer1, String answer2, String answer3, String answer4, String answer5, String answer6, String answer7, String answer8) {
+        super(type, questionText, questionType);
+        this.answer1 = answer1;
+        this.answer2 = answer2;
+        this.answer3 = answer3;
+        this.answer4 = answer4;
+        this.answer5 = answer5;
+        this.answer6 = answer6;
+        this.answer7 = answer7;
+        this.answer8 = answer8;
+    }
+
+    public Keyword(String type, String questionText, String questionType, String answer1, String answer2, String answer3, String answer4, String answer5, String answer6, String answer7, String answer8, String answer9) {
+        super(type, questionText, questionType);
+        this.answer1 = answer1;
+        this.answer2 = answer2;
+        this.answer3 = answer3;
+        this.answer4 = answer4;
+        this.answer5 = answer5;
+        this.answer6 = answer6;
+        this.answer7 = answer7;
+        this.answer8 = answer8;
+        this.answer9 = answer9;
+    }
+
+    public Keyword(String type, String questionText, String questionType, String answer1, String answer2, String answer3, String answer4, String answer5, String answer6, String answer7, String answer8, String answer9, String answer10) {
+        super(type, questionText, questionType);
+        this.answer1 = answer1;
+        this.answer2 = answer2;
+        this.answer3 = answer3;
+        this.answer4 = answer4;
+        this.answer5 = answer5;
+        this.answer6 = answer6;
+        this.answer7 = answer7;
+        this.answer8 = answer8;
+        this.answer9 = answer9;
+        this.answer10 = answer10;
+    }
+
     public String getAnswer1() {
         return answer1;
     }
