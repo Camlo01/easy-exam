@@ -1,5 +1,6 @@
 package com.milo.ee.model.question;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
 @JsonTypeName("MULTICHOICE")
@@ -26,9 +27,6 @@ public class Multichoice extends Question {
     private String answer10;
     private String isAnswer10;
 
-    public Multichoice() {
-    }
-
     public Multichoice(String type, String questionText, String questionType, String answer1, String isAnswer1, String answer2, String isAnswer2, String answer3, String isAnswer3) {
         super(type, questionText, questionType);
         this.answer1 = answer1;
@@ -39,6 +37,7 @@ public class Multichoice extends Question {
         this.isAnswer3 = isAnswer3;
     }
 
+    @JsonCreator
     public Multichoice(String type, String questionText, String questionType, String answer1, String isAnswer1, String answer2, String isAnswer2, String answer3, String isAnswer3, String answer4, String isAnswer4) {
         super(type, questionText, questionType);
         this.answer1 = answer1;
@@ -245,4 +244,13 @@ public class Multichoice extends Question {
         return isAnswer10;
     }
 
+    @Override
+    public String toString() {
+        return "Multichoice{" +
+                "isAnswer1='" + isAnswer1 + '\'' +
+                ", isAnswer2='" + isAnswer2 + '\'' +
+                ", isAnswer3='" + isAnswer3 + '\'' +
+                ", isAnswer4='" + isAnswer4 + '\'' +
+                '}';
+    }
 }
