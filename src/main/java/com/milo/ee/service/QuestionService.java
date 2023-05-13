@@ -19,16 +19,11 @@ public class QuestionService {
      */
     public void saveQuestions(Workbook workbook, ArrayList<Question> questions) {
         for (int i = 0; i < questions.size(); i++) {
-            System.out.println(questions.get(i).toString());
             Row rowForThisQuestion = workbook.getSheetAt(0).createRow(i + 1);
             setValuesInRow(questions.get(i), rowForThisQuestion);
         }
     }
 
-    public void exportAsCSV(Workbook workbook) {
-        String nonImplementeMethodMessage = "Oops! It looks like this method hasn't been implemented yet. We're working on it, thank you for your patience!";
-        throw new UnsupportedOperationException(nonImplementeMethodMessage);
-    }
 
     /**
      * Method in charge of configuring values of a question according to its type
@@ -254,6 +249,15 @@ public class QuestionService {
      * @param row
      */
     private void setValuesSequenceQuestion(Sequence sequence, Row row) {
+
+        Cell cell1 = row.createCell(42);
+        cell1.setCellValue(sequence.getSequenceText1());
+
+        Cell cell2 = row.createCell(43);
+        cell2.setCellValue(sequence.getSequenceText2());
+
+        Cell cell3 = row.createCell(44);
+        cell3.setCellValue(sequence.getSequenceText3());
 
         Cell cell4 = row.createCell(45);
         cell4.setCellValue(sequence.getSequenceText4());
