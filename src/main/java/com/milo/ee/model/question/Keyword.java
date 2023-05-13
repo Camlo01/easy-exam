@@ -17,6 +17,9 @@ public class Keyword extends Question {
     private String answer9;
     private String answer10;
 
+    public Keyword() {
+    }
+
     public Keyword(String type, String questionText, String questionType, String answer1) {
         super(type, questionText, questionType);
         this.answer1 = answer1;
