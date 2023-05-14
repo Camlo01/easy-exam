@@ -1,0 +1,1 @@
+web: java -Dspring.profiles.active=default -Dserver.post=$PORT -jar target/ee-0.0.1-SNAPSHOT.jar
