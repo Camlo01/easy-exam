@@ -75,5 +75,5 @@ jobs:
         uses: azure/webapps-deploy@v2
         with:
           app-name: 'easy-exam'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_EB3B0F005DFF43A19EC666EC542FAFD1 }}
+          publish-profile:  ${{ secrets.AzureAppService_PublishProfile_4098c16024e94ff19562c29388631a33 }}
           package: '*.jar'
