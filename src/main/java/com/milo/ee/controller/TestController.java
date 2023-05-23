@@ -8,7 +8,7 @@ public class TestController {
 
     @GetMapping("/hi")
     public String message(){
-        return "Aplicación conectada correctamente";
+        return "Aplicación conectada correctamente!";
     }
 
 }
