@@ -55,6 +55,7 @@ public class QuestionService {
      * @param row
      */
     private void setValuesFreetextQuestion(Freetext freeText, Row row) {
+        setAllCellsEmpty(row);
         setConfigValuesInRow(freeText, row);
     }
 
@@ -65,6 +66,7 @@ public class QuestionService {
      * @param row
      */
     private void setValuesMultichoiceQuestion(Multichoice multichoice, Row row) {
+        setAllCellsEmpty(row);
 
         Cell cell1 = row.createCell(2);
         cell1.setCellValue(multichoice.getAnswer1());
@@ -138,6 +140,7 @@ public class QuestionService {
      * @param row
      */
     private void setValuesKeywordQuestion(Keyword keyword, Row row) {
+        setAllCellsEmpty(row);
 
         Cell cell2 = row.createCell(2);
         cell2.setCellValue(keyword.getAnswer1());
@@ -179,6 +182,8 @@ public class QuestionService {
      * @param row
      */
     private void setValuesMatchQuestion(Match match, Row row) {
+        setAllCellsEmpty(row);
+
         Cell cell1 = row.createCell(22);
         cell1.setCellValue(match.getOptionText1());
 
@@ -249,6 +254,8 @@ public class QuestionService {
      * @param row
      */
     private void setValuesSequenceQuestion(Sequence sequence, Row row) {
+        setAllCellsEmpty(row);
+
 
         Cell cell1 = row.createCell(42);
         cell1.setCellValue(sequence.getSequenceText1());
@@ -320,6 +327,194 @@ public class QuestionService {
 
         Cell cell59 = row.createCell(58);
         cell59.setCellValue(question.getMarkingGuide());
+    }
+
+
+    /**
+     * method created to solve no existence cells
+     * @param row from what set empty the cell
+     */
+    public void setAllCellsEmpty(Row row){
+
+        Cell cell1 = row.createCell(0);
+        cell1.setCellValue("");
+
+        Cell cell2 = row.createCell(1);
+        cell2.setCellValue("");
+
+//        Agrega todos los que faltan acá
+
+        Cell cell3 = row.createCell(2);
+        cell3.setCellValue("");
+
+        Cell cell4 = row.createCell(3);
+        cell4.setCellValue("");
+
+        Cell cell5 = row.createCell(4);
+        cell5.setCellValue("");
+
+        Cell cell6 = row.createCell(5);
+        cell6.setCellValue("");
+
+        Cell cell7 = row.createCell(6);
+        cell7.setCellValue("");
+
+        Cell cell8 = row.createCell(7);
+        cell8.setCellValue("");
+
+        Cell cell9 = row.createCell(8);
+        cell9.setCellValue("");
+
+        Cell cell10 = row.createCell(9);
+        cell10.setCellValue("");
+
+        Cell cell11 = row.createCell(10);
+        cell11.setCellValue("");
+
+        Cell cell12 = row.createCell(11);
+        cell12.setCellValue("");
+
+        Cell cell13 = row.createCell(12);
+        cell13.setCellValue("");
+
+        Cell cell14 = row.createCell(13);
+        cell14.setCellValue("");
+
+        Cell cell15 = row.createCell(14);
+        cell15.setCellValue("");
+
+        Cell cell16 = row.createCell(15);
+        cell16.setCellValue("");
+
+        Cell cell17 = row.createCell(16);
+        cell17.setCellValue("");
+
+        Cell cell18 = row.createCell(17);
+        cell18.setCellValue("");
+
+        Cell cell19 = row.createCell(18);
+        cell19.setCellValue("");
+
+        Cell cell20 = row.createCell(19);
+        cell20.setCellValue("");
+
+        Cell cell21 = row.createCell(20);
+        cell21.setCellValue("");
+
+        Cell cell22 = row.createCell(21);
+        cell22.setCellValue("");
+
+        Cell cell23 = row.createCell(22);
+        cell23.setCellValue("");
+
+        Cell cell24 = row.createCell(23);
+        cell24.setCellValue("");
+
+        Cell cell25 = row.createCell(24);
+        cell25.setCellValue("");
+
+        Cell cell26 = row.createCell(25);
+        cell26.setCellValue("");
+
+        Cell cell27 = row.createCell(26);
+        cell27.setCellValue("");
+
+        Cell cell28 = row.createCell(27);
+        cell28.setCellValue("");
+
+        Cell cell29 = row.createCell(28);
+        cell29.setCellValue("");
+
+        Cell cell30 = row.createCell(29);
+        cell30.setCellValue("");
+
+        Cell cell31 = row.createCell(30);
+        cell31.setCellValue("");
+
+        Cell cell32 = row.createCell(31);
+        cell32.setCellValue("");
+
+        Cell cell33 = row.createCell(32);
+        cell33.setCellValue("");
+
+        Cell cell34 = row.createCell(33);
+        cell34.setCellValue("");
+
+        Cell cell35 = row.createCell(34);
+        cell35.setCellValue("");
+
+        Cell cell36 = row.createCell(35);
+        cell36.setCellValue("");
+
+        Cell cell37 = row.createCell(36);
+        cell37.setCellValue("");
+
+        Cell cell38 = row.createCell(37);
+        cell38.setCellValue("");
+
+        Cell cell39 = row.createCell(38);
+        cell39.setCellValue("");
+
+        Cell cell40 = row.createCell(39);
+        cell40.setCellValue("");
+
+        Cell cell41 = row.createCell(40);
+        cell41.setCellValue("");
+
+        Cell cell42 = row.createCell(41);
+        cell42.setCellValue("");
+
+        Cell cell43 = row.createCell(42);
+        cell43.setCellValue("");
+
+        Cell cell44 = row.createCell(43);
+        cell44.setCellValue("");
+
+        Cell cell45 = row.createCell(44);
+        cell45.setCellValue("");
+
+        Cell cell46 = row.createCell(45);
+        cell46.setCellValue("");
+
+        Cell cell47 = row.createCell(46);
+        cell47.setCellValue("");
+
+        Cell cell48 = row.createCell(47);
+        cell48.setCellValue("");
+
+        Cell cell49 = row.createCell(48);
+        cell49.setCellValue("");
+
+        Cell cell50 = row.createCell(49);
+        cell50.setCellValue("");
+
+        Cell cell51 = row.createCell(50);
+        cell51.setCellValue("");
+
+        Cell cell52 = row.createCell(51);
+        cell52.setCellValue("");
+
+        Cell cell53 = row.createCell(52);
+        cell53.setCellValue("");
+
+        Cell cell54 = row.createCell(53);
+        cell54.setCellValue("");
+
+        Cell cell55 = row.createCell(54);
+        cell55.setCellValue("");
+
+        Cell cell56 = row.createCell(52);
+        cell56.setCellValue("");
+
+        Cell cell57 = row.createCell(56);
+        cell57.setCellValue("");
+
+        Cell cell58 = row.createCell(57);
+        cell58.setCellValue("");
+
+        Cell cell59 = row.createCell(58);
+        cell59.setCellValue("");
+
     }
 
 }
