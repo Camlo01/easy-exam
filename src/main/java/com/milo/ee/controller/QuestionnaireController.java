@@ -62,7 +62,7 @@ public class QuestionnaireController {
             for (Cell cell : row) {
 
                 // obtain the value of a cell as a String and add it to the StringBuilder
-                csv.append(cell.getStringCellValue()).append(";");
+                csv.append(cell.getStringCellValue()).append(",");
             }
             // add new empty line to separate the rows
             csv.append("\n");
@@ -76,7 +76,7 @@ public class QuestionnaireController {
             // Obtain the output flow of the HTTP response
             OutputStream outputStream = response.getOutputStream();
 
-            // Write the CSV data into the output flow Escribir los datos CSV en el flujo de salida
+            // Write the CSV data into the output flow
             outputStream.write(csv.toString().getBytes());
             outputStream.flush();
             outputStream.close();
