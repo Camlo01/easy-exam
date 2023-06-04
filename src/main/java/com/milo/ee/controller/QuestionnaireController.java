@@ -68,10 +68,10 @@ public class QuestionnaireController {
                 cellValue.replaceAll(",", ".");
 
                 // remove skip lines
-                cellValue.replaceAll("\\n","  ");
+                cellValue.replaceAll("\n","  ");
 
                 // value is added to csv file
-                csv.append(cellValue).append(",");
+                csv.append(cellValue + ",");
             }
             // add new empty line to separate the rows
             csv.append("\n");
