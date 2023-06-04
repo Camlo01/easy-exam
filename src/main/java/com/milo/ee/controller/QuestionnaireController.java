@@ -71,7 +71,7 @@ public class QuestionnaireController {
                 cellValue.replaceAll("\\n","  ");
 
                 // value is added to csv file
-                csv.append(cell.getStringCellValue()).append(",");
+                csv.append(cellValue).append(",");
             }
             // add new empty line to separate the rows
             csv.append("\n");
