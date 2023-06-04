@@ -62,6 +62,15 @@ public class QuestionnaireController {
             for (Cell cell : row) {
 
                 // obtain the value of a cell as a String and add it to the StringBuilder
+                String cellValue = cell.getStringCellValue();
+
+                // remove commas
+                cellValue.replaceAll(",", ".");
+
+                // remove skip lines
+                cellValue.replaceAll("\n","  ");
+
+                // value is added to csv file
                 csv.append(cell.getStringCellValue()).append(",");
             }
             // add new empty line to separate the rows
