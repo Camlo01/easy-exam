@@ -62,7 +62,7 @@ public class QuestionnaireController {
             for (Cell cell : row) {
 
                 // obtain the value of a cell as a String and add it to the StringBuilder
-                csv.append(cell.getStringCellValue().replaceAll(",",".").replaceAll("\n","")).append(",");
+                csv.append(cell.getStringCellValue().replaceAll(",",".").replaceAll("\n"," ")).append(",");
             }
             // add new empty line to separate the rows
             csv.append("\n");
