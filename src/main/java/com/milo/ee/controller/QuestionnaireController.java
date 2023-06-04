@@ -68,7 +68,7 @@ public class QuestionnaireController {
                 cellValue.replaceAll(",", ".");
 
                 // remove skip lines
-                cellValue.replaceAll("\n","  ");
+                cellValue.replaceAll("\\n","  ");
 
                 // value is added to csv file
                 csv.append(cell.getStringCellValue()).append(",");
