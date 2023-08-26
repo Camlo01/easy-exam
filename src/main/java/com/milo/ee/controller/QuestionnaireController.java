@@ -1,7 +1,10 @@
 package com.milo.ee.controller;
 
+import com.milo.ee.EeApplication;
 import com.milo.ee.model.question.Question;
 import com.milo.ee.service.QuestionService;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
@@ -47,13 +50,16 @@ public class QuestionnaireController {
     @PostMapping("/document-csv")
     public void returnWorkbookAsCSVFile(HttpServletResponse response, @RequestBody ArrayList<Question> questions) {
 
+//        Create csv file, including first question
         Workbook workbook = new com.milo.ee.model.question.workbook.Workbook().getWorkbook();
 
+//        save questions from the Array to the workbook
         service.saveQuestions(workbook, questions);
 
-        StringBuilder csv = new StringBuilder();
+//        The file that will be returned
+        StringBuilder csvToGenerate = new StringBuilder();
 
-        Sheet sheet = workbook.getSheetAt(0);
+        Sheet sheet = workbook.getSheetAt(0); // IST REQUIRED CREATE A SHEET
 
         //Iterate each row
         for (Row row : sheet) {
@@ -61,11 +67,12 @@ public class QuestionnaireController {
             // Iterate each cell of the rows
             for (Cell cell : row) {
 
-                // obtain the value of a cell as a String and add it to the StringBuilder
-                csv.append(cell.getStringCellValue().replaceAll(",",".").replaceAll("\n"," ")).append(",");
+                // Obtain the value of a cell as a String and add it to the StringBuilder
+                csvToGenerate.append(cell.getStringCellValue().replaceAll(",",".").replaceAll("\n","  ")).append(",");
             }
+
             // add new empty line to separate the rows
-            csv.append("\n");
+            csvToGenerate.append("\n");
         }
 
         // Configure the HTTP response
@@ -77,10 +84,15 @@ public class QuestionnaireController {
             OutputStream outputStream = response.getOutputStream();
 
             // Write the CSV data into the output flow
-            outputStream.write(csv.toString().getBytes());
+            outputStream.write(csvToGenerate.toString().getBytes());
             outputStream.flush();
             outputStream.close();
         } catch (IOException e) {
+
+            final Log Logger = LogFactory.getLog(EeApplication.class);
+
+            Logger.error("Something went wrong trying downloading the file");
+
             e.printStackTrace();
         }
 

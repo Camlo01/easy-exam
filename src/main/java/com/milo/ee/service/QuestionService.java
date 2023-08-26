@@ -1,6 +1,9 @@
 package com.milo.ee.service;
 
+import com.milo.ee.EeApplication;
 import com.milo.ee.model.question.*;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Workbook;
@@ -12,18 +15,17 @@ import java.util.ArrayList;
 public class QuestionService {
 
     /**
-     * Method in charge of saving objects of an ArrayList of Question in a Workbook
+     * Method in charge of save questions from the ArrayList of Questions in the Workbook
      *
      * @param workbook  in which to save the questions
      * @param questions to save
      */
     public void saveQuestions(Workbook workbook, ArrayList<Question> questions) {
         for (int i = 0; i < questions.size(); i++) {
-            Row rowForThisQuestion = workbook.getSheetAt(0).createRow(i + 1);
-            setValuesInRow(questions.get(i), rowForThisQuestion);
+            Row newQuestion = workbook.getSheetAt(0).createRow(i + 1);
+            setValuesInRow(questions.get(i), newQuestion);
         }
     }
-
 
     /**
      * Method in charge of configuring values of a question according to its type
@@ -44,7 +46,14 @@ public class QuestionService {
 
             case "SEQUENCE" -> setValuesSequenceQuestion((Sequence) question, row);
 
-            default -> System.out.println("Something went wrong");
+            default -> {
+                final Log Log = LogFactory.getLog(EeApplication.class);
+
+                System.out.println();
+                Log.error("Something went wrong!");
+                System.out.println();
+
+            }
         }
     }
 
@@ -52,7 +61,7 @@ public class QuestionService {
      * configure the values of the questions in their corresponding row
      *
      * @param freeText type of question
-     * @param row
+     * @param row where to set the free text question
      */
     private void setValuesFreetextQuestion(Freetext freeText, Row row) {
         setAllCellsEmpty(row);
@@ -63,7 +72,7 @@ public class QuestionService {
      * configure the values of the questions in their corresponding row
      *
      * @param multichoice type of question
-     * @param row
+     * @param row where to set the multichoice question
      */
     private void setValuesMultichoiceQuestion(Multichoice multichoice, Row row) {
         setAllCellsEmpty(row);
@@ -137,7 +146,7 @@ public class QuestionService {
      * configure the values of the questions in their corresponding row
      *
      * @param keyword type of question
-     * @param row
+     * @param row where to set the keyword question
      */
     private void setValuesKeywordQuestion(Keyword keyword, Row row) {
         setAllCellsEmpty(row);
@@ -179,7 +188,7 @@ public class QuestionService {
      * configure the values of the questions in their corresponding row
      *
      * @param match type of question
-     * @param row
+     * @param row where to set the Match question
      */
     private void setValuesMatchQuestion(Match match, Row row) {
         setAllCellsEmpty(row);
@@ -251,7 +260,7 @@ public class QuestionService {
      * configure the values of the questions in their corresponding row
      *
      * @param sequence type of question
-     * @param row
+     * @param row where to set the sequence question
      */
     private void setValuesSequenceQuestion(Sequence sequence, Row row) {
         setAllCellsEmpty(row);
@@ -293,8 +302,8 @@ public class QuestionService {
     /**
      * function in charge of configuring the configuration values of the questions
      *
-     * @param question
-     * @param row
+     * @param question to set default configuration
+     * @param row of question
      */
     private void setConfigValuesInRow(Question question, Row row) {
 
@@ -331,7 +340,7 @@ public class QuestionService {
 
 
     /**
-     * method created to solve no existence cells
+     * method created to solve no existence cells problem
      * @param row from what set empty the cell
      */
     public void setAllCellsEmpty(Row row){
@@ -341,8 +350,6 @@ public class QuestionService {
 
         Cell cell2 = row.createCell(1);
         cell2.setCellValue("");
-
-//        Agrega todos los que faltan acá
 
         Cell cell3 = row.createCell(2);
         cell3.setCellValue("");
