@@ -87,6 +87,11 @@ public class QuestionnaireController {
             outputStream.write(csvToGenerate.toString().getBytes());
             outputStream.flush();
             outputStream.close();
+
+            final Log Logger = LogFactory.getLog(EeApplication.class);
+            System.out.println();
+            Logger.info("Exam is generated");
+
         } catch (IOException e) {
 
             final Log Logger = LogFactory.getLog(EeApplication.class);
