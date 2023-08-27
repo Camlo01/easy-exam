@@ -9,7 +9,11 @@ import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.TimeZone;
 
 @Service
 public class QuestionService {
@@ -61,7 +65,7 @@ public class QuestionService {
      * configure the values of the questions in their corresponding row
      *
      * @param freeText type of question
-     * @param row where to set the free text question
+     * @param row      where to set the free text question
      */
     private void setValuesFreetextQuestion(Freetext freeText, Row row) {
         setAllCellsEmpty(row);
@@ -72,7 +76,7 @@ public class QuestionService {
      * configure the values of the questions in their corresponding row
      *
      * @param multichoice type of question
-     * @param row where to set the multichoice question
+     * @param row         where to set the multichoice question
      */
     private void setValuesMultichoiceQuestion(Multichoice multichoice, Row row) {
         setAllCellsEmpty(row);
@@ -146,7 +150,7 @@ public class QuestionService {
      * configure the values of the questions in their corresponding row
      *
      * @param keyword type of question
-     * @param row where to set the keyword question
+     * @param row     where to set the keyword question
      */
     private void setValuesKeywordQuestion(Keyword keyword, Row row) {
         setAllCellsEmpty(row);
@@ -188,7 +192,7 @@ public class QuestionService {
      * configure the values of the questions in their corresponding row
      *
      * @param match type of question
-     * @param row where to set the Match question
+     * @param row   where to set the Match question
      */
     private void setValuesMatchQuestion(Match match, Row row) {
         setAllCellsEmpty(row);
@@ -260,7 +264,7 @@ public class QuestionService {
      * configure the values of the questions in their corresponding row
      *
      * @param sequence type of question
-     * @param row where to set the sequence question
+     * @param row      where to set the sequence question
      */
     private void setValuesSequenceQuestion(Sequence sequence, Row row) {
         setAllCellsEmpty(row);
@@ -303,7 +307,7 @@ public class QuestionService {
      * function in charge of configuring the configuration values of the questions
      *
      * @param question to set default configuration
-     * @param row of question
+     * @param row      of question
      */
     private void setConfigValuesInRow(Question question, Row row) {
 
@@ -341,9 +345,10 @@ public class QuestionService {
 
     /**
      * method created to solve no existence cells problem
+     *
      * @param row from what set empty the cell
      */
-    public void setAllCellsEmpty(Row row){
+    public void setAllCellsEmpty(Row row) {
 
         Cell cell1 = row.createCell(0);
         cell1.setCellValue("");
@@ -522,6 +527,80 @@ public class QuestionService {
         Cell cell59 = row.createCell(58);
         cell59.setCellValue("");
 
+    }
+
+    /**
+     * Method in charge of show in console when an exam is generated
+     */
+    public void consoleReportOfExam() {
+        System.out.println();
+        System.out.println();
+        System.out.println("---> " + getDateColombia() + " --- Exam is generated");
+        System.out.println();
+    }
+
+    /**
+     * Get actual date in Colombia
+     * format: yyyy/MM/dd
+     *
+     * @return String of date
+     */
+    private String getDateColombia() {
+
+        // define Colombian Date
+        LocalDate currentDate = LocalDate.now();
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy/MM/dd");
+        String completeDate = currentDate.format(formatter);
+
+        // add Colombian time to the date
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTimeZone(TimeZone.getTimeZone("America/Bogota"));
+
+        String hour = determineHour(calendar.get(Calendar.HOUR_OF_DAY));
+        String minute = determineMinute(calendar.get(Calendar.MINUTE));
+        String meridiem = determineMeridiem(calendar.get(Calendar.HOUR_OF_DAY));
+
+        String completeTime = hour + ":" + minute + " " + meridiem;
+
+        return "Date " + completeDate + " Time " + completeTime;
+    }
+
+    /**
+     * Return hour in 12 format
+     *
+     * @param hour int to convert
+     * @return String of date converted
+     */
+    private String determineHour(int hour) {
+        if (hour >= 13) {
+            return String.valueOf(hour - 12);
+        }
+        return String.valueOf(hour);
+    }
+
+    /**
+     * Add 0 to minutes less than 2 digits
+     *
+     * @param minute int to convert
+     * @return minutes converted
+     */
+    private String determineMinute(int minute) {
+        String minuteString = String.valueOf(minute);
+
+        if (minuteString.length() < 2) {
+            return "0" + minuteString;
+        }
+        return minuteString;
+    }
+
+    /**
+     * The time is determined if it is AM or PM
+     *
+     * @param hour in 24 format
+     * @return String AM or PM
+     */
+    private String determineMeridiem(int hour) {
+        return (hour > 12) ? "PM" : "AM";
     }
 
 }
