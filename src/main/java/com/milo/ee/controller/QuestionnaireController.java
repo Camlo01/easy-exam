@@ -88,9 +88,7 @@ public class QuestionnaireController {
             outputStream.flush();
             outputStream.close();
 
-            final Log Logger = LogFactory.getLog(EeApplication.class);
-            System.out.println();
-            Logger.info("Exam is generated");
+            service.consoleReportOfExam();
 
         } catch (IOException e) {
 
