@@ -532,10 +532,10 @@ public class QuestionService {
     /**
      * Method in charge of show in console when an exam is generated
      */
-    public void consoleReportOfExam() {
+    public void consoleReportOfExam(String fileName) {
         System.out.println();
         System.out.println();
-        System.out.println("---> " + getDateColombia() + " --- Exam is generated");
+        System.out.println("---> " + getDateColombia() + " --- Exam is generated: [" + fileName + "]");
         System.out.println();
     }
 
