@@ -47,8 +47,8 @@ public class QuestionnaireController {
         workbook.close();
     }
 
-    @PostMapping("/document-csv")
-    public void returnWorkbookAsCSVFile(HttpServletResponse response, @RequestBody ArrayList<Question> questions) {
+    @PostMapping("/document-csv/{fileName}")
+    public void returnWorkbookAsCSVFile(HttpServletResponse response, @RequestBody ArrayList<Question> questions,@PathVariable String fileName) {
 
 //        Create csv file, including first question
         Workbook workbook = new com.milo.ee.model.question.workbook.Workbook().getWorkbook();
@@ -88,7 +88,7 @@ public class QuestionnaireController {
             outputStream.flush();
             outputStream.close();
 
-            service.consoleReportOfExam();
+            service.consoleReportOfExam(fileName);
 
         } catch (IOException e) {
 
